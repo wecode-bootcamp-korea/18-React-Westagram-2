@@ -1,0 +1,25 @@
+@import './reset.scss';
+
+input ,button ,textarea {
+    &:hover{
+        cursor: pointer;
+    }
+    &:focus{
+        outline: none;
+    }
+}
+
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+$color-white: #FFFFFF;
+$color-lightgrey: #FAFAFA;
+$color-grey: #8E8E8E;
+$button-color: #0095F6;
+$border: 1px solid rgba(0, 0, 0, 0.2);
