@@ -1,0 +1,53 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 50px 650px 80px;
+  box-sizing: border-box;
+  border: 1px solid #eceff1;
+  text-align: center;
+}
+
+.instagram {
+  display: inline-block;
+  width: 500px;
+  font-family: "Grand Hotel", cursive;
+  font-size: 60px;
+}
+
+.inlineToBlock {
+  display: inline-block;
+  width: 500px;
+  height: 55px;
+  margin: 8px 5px;
+  background-color: #f5f5f5;
+  border: 1px solid #f5f5f5;
+  border-radius: 5px;
+  font-size: 17px;
+}
+
+.login {
+  display: inline-block;
+  width: 500px;
+  height: 50px;
+  margin: 25px 5px 100px 5px;
+  background-color: #b3e5fc;
+  border: 1px solid #b3e5fc;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+
+.forget {
+  display: inline-block;
+  width: 500px;
+  margin: 40px;
+}
+
+.forget:hover {
+  color: blueviolet;
+  opacity: 0.3;
+  text-align: center;
+  cursor: pointer;
+}

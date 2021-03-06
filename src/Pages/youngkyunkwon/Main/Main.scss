@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+}
+
+body {
+  padding-top: 60px;
+}
+
+.fixedBar {
+  border: 1px solid black;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  margin: 0px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.bar {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 25%;
+}
+
+.barLogo {
+  font-family: "Grand Hotel", cursive;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.search {
+  position: relative;
+  width: 220px;
+  height: 40%;
+  text-align: center;
+  font-size: 15px;
+  margin: 15px;
+}
+
+.icon {
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 20px;
+  z-index: 1;
+  font-size: 10px;
+}
+
+.barImg {
+  width: 250px;
+  font-size: 30px;
+  margin-top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userPic {
+  max-width: 100%;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+}
+
+.main {
+  border: 1px solid black;
+  display: flex;
+  margin: 30px 25%;
+}
+
+.feeds {
+  border: 1px solid black;
+  margin-right: 20px;
+}
+
+.storyPic {
+  height: 40px;
+  border-radius: 50%;
+}
+
+.story {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.storyFirst,
+.storySecond,
+.storyThird,
+.storyFourth {
+  display: flex;
+  flex-direction: column;
+  align-items: flex;
+  font-size: 5px;
+  text-align: center;
+}
+
+.storyFirst img,
+.storySecond img,
+.storyThird img,
+.storyFourth img {
+  width: 50px;
+}
+
+.articleNavPic img {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+}
+
+.articleNav {
+  border: 1px solid red;
+  display: flex;
+  position: relative;
+}
+
+.articleNavPome {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.moreInfo {
+  position: absolute;
+  right: 20px;
+}
+
+.articlePic {
+  width: 550px;
+  object-fit: cover;
+}
+
+.articleBottom {
+  border: 1px solid black;
+  position: relative;
+}
+
+#bookmarkImg img {
+  position: absolute;
+  right: 100px;
+}
+
+.like {
+  border: 1px solid black;
+  font-size: 10px;
+}
+
+.comment {
+  border: 1px solid black;
+  font-size: 10px;
+}
+
+.commentExplain {
+  border: 1px solid black;
+}
+
+.commentComment {
+  border: 1px solid black;
+}
+
+.date {
+  border: 1px solid black;
+}
+
+.typeComment {
+  border: 1px solid black;
+}
+
+.mainRight {
+  border: 1px solid black;
+}
+.mainRightContent {
+  border: 1px solid black;
+}
+.rightFirst {
+  border: 1px solid black;
+}
+.userPic {
+  border: 1px solid black;
+}
+.rightSecond {
+  border: 1px solid black;
+}
+.secondMiddle {
+  border: 1px solid black;
+}
+.middleFirst {
+  border: 1px solid black;
+}
+.middleSecond {
+  border: 1px solid black;
+}
+.middleThird {
+  border: 1px solid black;
+}
+.rightThird {
+  border: 1px solid black;
+}
