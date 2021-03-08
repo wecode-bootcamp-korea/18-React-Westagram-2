@@ -28,13 +28,15 @@ class LoginYoojin extends Component {
     }
 
     render() {
+        const validation = this.state.id.includes("@") && this.state.pw.length > 4
+
         return (
             <div className="Login">
                 <div className="box">
                         <h1>Westagram</h1>
                         <input onChange={this.handleIdInput} className="inputBox" type="text" placeholder="전화번호, 사용자 이름 또는 이메일" />
                         <input onChange={this.handlePwInput} className="inputBox" type="password" placeholder="비밀번호" />   
-                        <button className="loginButton" onClick={this.goToMain}>로그인</button>
+                        <button className="loginButton" onClick={this.goToMain} style={{opacity: validation? "1" : "0.5"}}>로그인</button>
                     
                         <div className="breakLine">
                             <div className="line"></div>
