@@ -1,0 +1,41 @@
+[
+  {
+    "id": 0,
+    "channelName": "wecode_bootcamp",
+    "channelLocation": "wecode",
+    "channelProfileImg": "https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s150x150/64219646_866712363683753_7365878438877462528_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_ohc=91HPV9vMJ5YAX8puYhc&tp=1&oh=dd8faa56de8a190fe7ca403a41c7efa5&oe=60604BF0",
+    "channelContentImgList": [
+      "https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/153372379_1291691311231547_3372549370175097510_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=111&_nc_ohc=6jaX27XROogAX_9gz00&tp=1&oh=b3483806c6e321b57c9548ef2c048030&oe=6060951A"
+    ],
+    "contentDate": "16시간 전",
+    "contentLike": 5,
+    "contentText": "오늘도 멘토님과 수강생 분들이 열심히🔥 프로젝트 준비를 하고 있습니다. 수강생들을 위해 끊임없이 고민하고 연구하시는 멘토 종택님과 병민님의 멋진 모습 \uD83D\uDCF8",
+    "contentComments": []
+  },
+  {
+    "id": 1,
+    "channelName": "wecode_bootcamp",
+    "channelLocation": "wecode",
+    "channelProfileImg": "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/landing/bootcamp/boot_1.jpg",
+    "channelContentImgList": [
+      "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/landing/bootcamp/boot_1.jpg"
+    ],
+    "contentDate": "18시간 전",
+    "contentLike": 10,
+    "contentText": "메인코스 수강생에게 제공되는 WeWork 이용권으로 3개월 동안 24시간 WeWork를 이용하실 수 있습니다. 생맥주, TERAROSA(테라로사), 커피, 우유, 두유가 무제한으로 제공되고 암벽등반, 탁구, 북클럽, 요가 클래스 등 다양한 이벤트가 있는 위워크에서 동기들과 함께 강남의 테헤란로 중심부에서 개발자의 커리어를 멋지게 시작하세요.📸",
+    "contentComments": []
+  },
+  {
+    "id": 2,
+    "channelName": "cat",
+    "channelLocation": "house",
+    "channelProfileImg": "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/landing/bootcamp/boot_4_1.jpg",
+    "channelContentImgList": [
+      "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/landing/bootcamp/boot_4_1.jpg"
+    ],
+    "contentDate": "23시간 전",
+    "contentLike": 3,
+    "contentText": "졸업 후 에도 위코드의 혜택은 계속됩니다. 졸업 후에도 같이 공부하고 서로 이끌어 줄 수 있는 커뮤니티에 참여 하실 수 있습니다. 위코드 커뮤니티의 멤버로서 선후배 들과 같이 공부하고 프로젝트에 참여하거나 서로 기술 정보및 구인 정보를 공유하는 든든한 아군들과 평생 같이 성장할 수 있습니다.",
+    "contentComments": []
+  }
+]

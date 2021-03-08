@@ -7,8 +7,10 @@ import {
 
 import LoginYoojin from './Pages/yoojinkwon/Login/Login.js';
 import MainYoojin from './Pages/yoojinkwon/Main/Main.js';
-import LoginChanho from './Pages/chanhoyoon/Login/Login.js';
-import MainChanho from './Pages/chanhoyoon/Main/Main.js';
+
+import LoginChanho from './Pages/chanhoyoon/login/login.js';
+import MainChanho from './Pages/chanhoyoon/layout/AppLayout.js';
+
 import LoginJaewook from './Pages/jaewookjung/Login/Login.js';
 import MainJaewook from './Pages/jaewookjung/Main/Main.js';
 import LoginYoungkyun from './Pages/youngkyunkwon/Login/Login.js';
