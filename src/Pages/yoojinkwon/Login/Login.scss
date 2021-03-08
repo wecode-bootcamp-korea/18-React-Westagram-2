@@ -1,0 +1,84 @@
+%flex-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+$theme-line: 1px solid lightgrey;
+
+.Login{
+    
+    .box{
+        @extend %flex-center;
+        width: 400px; 
+        height: 420px;
+        margin: 100px auto;
+        border: $theme-line;
+        
+        h1{
+            font-family: 'Lobster', cursive;
+            font-size: 50px;
+        }
+
+        .inputBox{
+            box-sizing: border-box;
+            width: 250px; 
+            height: 30px;
+            padding: 2px 10px;
+            border: $theme-line;
+            border-radius: 2px;
+            background-color: rgb(247, 247, 247);
+            font-size: 12px;
+        }
+
+        .loginButton{
+            box-sizing: border-box;
+            width: 250px; 
+            height: 33px;
+            margin: 10px 0 30px 0;
+            border-style: none;
+            border-radius: 5px;
+            background-color: #0096f6;
+            opacity: 0.5;
+            font-size: 14px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .breakLine{
+            display: flex;
+            justify-content: space-around;
+            font-size: 12px;
+            font-weight: 600;
+            color: gray;
+
+            .line{
+                width: 90px;
+                margin: 6px 23px;
+                border-bottom: $theme-line;
+            }
+        }
+        
+        .fb{
+            margin-top: 30px;
+            color: #385185;
+
+            .fbLogin{
+                text-decoration: none;
+                font-size: 15px;
+                font-weight: 700;
+                color: #385185;
+                cursor: pointer;
+            }
+        }
+
+        .forgetPassword{
+            margin-top: 15px;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 500;
+            color: #385185;
+            cursor: pointer;
+        }
+    }
+}
