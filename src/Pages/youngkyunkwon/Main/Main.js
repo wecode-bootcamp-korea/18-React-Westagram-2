@@ -1,12 +1,20 @@
 import React from 'react';
-import './Main.css';
+import './Main.scss';
+import '../../../Styles/common.scss';
+import '../../../Styles/reset.scss';
+import 사진1 from '../../../images/youngkyunkwon/사진1.jpg';
+import 사진2 from '../../../images/youngkyunkwon/사진2.jpg';
+import 사진3 from '../../../images/youngkyunkwon/사진3.jpg';
+import story1 from '../../../images/youngkyunkwon/story1.jpg';
+import story2 from '../../../images/youngkyunkwon/story2.jpg';
+import story3 from '../../../images/youngkyunkwon/story3.jpg';
+import story4 from '../../../images/youngkyunkwon/story4.jpg';
 
 
-class Main extends React.Component {
+class MainYoungkyun extends React.Component {
     render() {
         return (
-            <body>
-            <div className= "wrap">
+            <div className= "MainYoungkyun">
                 <nav>
                     <div className= "fixedBar">
                         <span className= "bar">
@@ -20,7 +28,7 @@ class Main extends React.Component {
                             <span id ="dmImg"><i class="far fa-paper-plane"></i></span>
                             <span id ="compassImg"><i class="far fa-compass"></i></span>
                             <span id ="heartImg"><i class="far fa-heart"></i></span>
-                            <img src= "/images/사진2.jpg" alt= "userPic" className= "userPic" />
+                            <img src= {사진2} alt= "userPic" className= "userPic" />
                         </span>
                         </span>
                     </div>
@@ -30,19 +38,19 @@ class Main extends React.Component {
                     <div classNames ="feeds">
                         <div className= "story">
                             <span className= "storyFirst">
-                                <img src= "/images/story1.jpg" alt= "story1Pic" className= "storyPic" />
+                                <img src= {story1} alt= "story1Pic" className= "storyPic" />
                                 <span className= "firstName">artist_jihun</span>
                             </span>
                             <span className= "storySecond">
-                                <img src= "/images/story2.jpg" alt= "story2Pic" className= "storyPic" />
+                                <img src= {story2} alt= "story2Pic" className= "storyPic" />
                                 <span className= "secondName">yohee</span>
                             </span>
                             <span className= "storyThird">
-                                <img src= "/images/story3.jpg" alt= "story3Pic" className= "storyPic" />
+                                <img src= {story3} alt= "story3Pic" className= "storyPic" />
                                 <span className= "thirdName">laywer</span>
                             </span>
                             <span className= "storyFourth">
-                                <img src= "/images/story4.jpg" alt= "story4Pic" className= "storyPic" />
+                                <img src= {story4} alt= "story4Pic" className= "storyPic" />
                                 <span className= "fourthName">dog</span>
                             </span>
                             
@@ -50,7 +58,7 @@ class Main extends React.Component {
                         <article>
                             <header>
                                 <div className= "articleNav">
-                                    <span className="articleNavPic"><img src= "/images/사진3.jpg" alt= "articleNavPic" /></span>
+                                    <span className="articleNavPic"><img src= {사진3} alt= "articleNavPic" /></span>
                                     <span className= "articleNavPome">
                                         <span className= "articleNavName">pome_louis</span>
                                         <span className= "articleNavDetail">이쁜 내새끼</span>
@@ -58,7 +66,7 @@ class Main extends React.Component {
                                     <span className= "moreInfo"><i class="fas fa-ellipsis-h"></i></span>
                                 </div>
                             </header>
-                                <img src= "/images/사진1.jpg" alt= "articlePic" className= "articlePic" />
+                                <img src= {사진1} alt= "articlePic" className= "articlePic" />
                                 <div className= "articleBottom">
                                         <span id ="heartImg"><i class="far fa-heart"></i></span>
                                         <span id ="commentImg"><i class="far fa-comment"></i></span>
@@ -82,7 +90,7 @@ class Main extends React.Component {
                         <div className="mainRight">
                             <div className= "mainRightContent">
                                 <div className= "rightFirst">
-                                <img src= "/images/사진2.jpg" alt= "userPic" className= "userPic" />
+                                <img src= {사진2} alt= "userPic" className= "userPic" />
                                 <span className= "userName">youngs_factory</span>
                                 <span className= "userDetail">영균</span>
                             </div>
@@ -118,9 +126,8 @@ class Main extends React.Component {
                 </div>
                 </main>
             </div>
-        </body>
         )
     }
 }
 
-export default Main;
+export default MainYoungkyun;
