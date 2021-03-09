@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import "./Feeds.scss";
 import Comment from "./Components/Comment";
 
+import littleDog from "../../../../../images/jaewookjung/littleDog.jpg";
+import mainDog from "../../../../../images/jaewookjung/mainDog.jpg";
+
 class Feeds extends Component {
     constructor() {
         super();
@@ -50,7 +53,7 @@ class Feeds extends Component {
                     <div className="column_left">
                         <img
                             className="left_img img_small"
-                            src="https://images.unsplash.com/photo-1530041539828-114de669390e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8ODF8fGRvZ3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src={littleDog}
                             alt="smallImage"
                         />
                         <div className="left_text">
@@ -62,11 +65,7 @@ class Feeds extends Component {
                         <i className="fas fa-ellipsis-h"></i>
                     </div>
                 </div>
-                <img
-                    className="main_img"
-                    src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8ZG9nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="mainImage"
-                />
+                <img className="main_img" src={mainDog} alt="mainImage" />
                 <div className="img_contents">
                     <div className="img_icons general_column">
                         <div className="img_column_left">

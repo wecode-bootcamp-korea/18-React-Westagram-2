@@ -5,6 +5,8 @@ import "./Main.scss";
 import Nav from "./Components/Nav/Nav";
 import Feeds from "./Components/Feeds/Feeds";
 
+import littleDog from "../../../images/jaewookjung/littleDog.jpg";
+
 class MainJaewook extends React.Component {
     render() {
         return (
@@ -17,7 +19,7 @@ class MainJaewook extends React.Component {
                                 <div className="followers">
                                     <img
                                         className="followers_img img_big"
-                                        src="https://images.unsplash.com/photo-1530041539828-114de669390e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8ODF8fGRvZ3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                        src={littleDog}
                                         alt="follower1"
                                     />
                                     <div className="followers_name">doggy</div>
@@ -31,7 +33,7 @@ class MainJaewook extends React.Component {
                                     <div className="column_left">
                                         <img
                                             className="user_img img_normal"
-                                            src="https://images.unsplash.com/photo-1530041539828-114de669390e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8ODF8fGRvZ3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                            src={littleDog}
                                             alt="userImage"
                                         />
                                         <div className="user_text">
@@ -63,7 +65,7 @@ class MainJaewook extends React.Component {
                                     <div className="column_left">
                                         <img
                                             className="recommend_img img_small"
-                                            src="https://images.unsplash.com/photo-1530041539828-114de669390e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8ODF8fGRvZ3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                            src={littleDog}
                                             alt="recommendImage"
                                         />
                                         <div className="recommend_text">
@@ -86,7 +88,7 @@ class MainJaewook extends React.Component {
                                     <div className="column_left">
                                         <img
                                             className="recommend_img img_small"
-                                            src="https://images.unsplash.com/photo-1530041539828-114de669390e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8ODF8fGRvZ3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                            src={littleDog}
                                             alt="recommendImage"
                                         />
                                         <div className="recommend_text">
