@@ -15,15 +15,9 @@ class LoginYoojin extends Component {
         this.props.history.push('/main');
     }  
 
-    handleIdInput = (e) => {
+    handleInput = (e) => {
         this.setState({
-            id : e.target.value,
-        })
-    }
-
-    handlePwInput = (e) => {
-        this.setState({
-            pw : e.target.value,
+            [e.target.name] : e.target.value,
         })
     }
 
@@ -34,8 +28,8 @@ class LoginYoojin extends Component {
             <div className="Login">
                 <div className="box">
                         <h1>Westagram</h1>
-                        <input onChange={this.handleIdInput} className="inputBox" type="text" placeholder="전화번호, 사용자 이름 또는 이메일" />
-                        <input onChange={this.handlePwInput} className="inputBox" type="password" placeholder="비밀번호" />   
+                        <input onChange={this.handleInput} name="id" className="inputBox" type="text" placeholder="전화번호, 사용자 이름 또는 이메일" />
+                        <input onChange={this.handleInput} name="pw" className="inputBox" type="password" placeholder="비밀번호" />   
                         <button className="loginButton" onClick={this.goToMain} style={{opacity: validation? "1" : "0.5"}}>로그인</button>
                     
                         <div className="breakLine">
