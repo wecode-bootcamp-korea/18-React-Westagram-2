@@ -1,7 +1,7 @@
 import React from 'react';
 import PostContentText from './PostContentText';
 import PostComment from './PostComment';
-
+import './PostContentDescription.scss';
 import uuid from 'react-uuid';
 
 class PostContentDescription extends React.Component {

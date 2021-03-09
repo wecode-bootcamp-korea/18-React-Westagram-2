@@ -1,9 +1,10 @@
 import React from 'react';
+import './PostContentMain.scss';
 
 class PostContentMain extends React.Component {
 
   render() {
-    const {contentMainImgList, contentMainName} = this.props
+    const { contentMainImgList, contentMainName } = this.props;
     return (
       <>
         <div className="content-list-main">

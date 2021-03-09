@@ -1,0 +1,86 @@
+.content-list-description {
+   display         : flex;
+   flex-direction  : column;
+   justify-content : flex-start;
+   width           : 100%;
+   .list-description-header {
+      display         : flex;
+      justify-content : space-between;
+      align-items     : center;
+      width           : 100%;
+      height          : 40px;
+      margin-bottom   : 6px;
+      i {
+         font-size : 21px;
+      }
+      .header-icon button {
+         margin-right : 15px;
+         i {
+            transition : 0.6s all;
+         }
+      }
+      .header-img-length-icon {
+         margin-right : 100px;
+      }
+   }
+   .list-description-like {
+      height      : 18px;
+      font-weight : bold;
+      font-size   : 14px;
+      .like-count {
+         color : black;
+      }
+   }
+   .list-description-post-content {
+      width       : 100%;
+      line-height : 18px;
+      font-size   : 13px;
+      .list-description-post-content-comment {
+         .comment-count-btn {
+            margin-bottom : 7px;
+            color         : #8e8e8e;
+            font-size     : 14px;
+         }
+         .comment-main-box {
+            display         : flex;
+            flex-direction  : column;
+            justify-content : space-between;
+            align-items     : center;
+            width           : 100%;
+         }
+      }
+   }
+   .list-description-date {
+      width         : 100%;
+      height        : 19px;
+      margin-bottom : 10px;
+      color         : #9f989e;
+      font-size     : 11px;
+   }
+   .list-description-comment {
+      display     : flex;
+      align-items : center;
+      width       : 100%;
+      min-height  : 56px;
+      padding     : 0px 8px;
+      border-top  : 1px solid #f4f5f6;
+      .description-comment-form {
+         display         : flex;
+         justify-content : space-between;
+         align-items     : center;
+         width           : 100%;
+         .comment-emoticon-icon i {
+            font-size : 22px;
+         }
+         .comment-input {
+            width  : 90%;
+            border : none;
+         }
+         .comment-submit-btn {
+            font-weight : bold;
+            color       : #d3e5f6;
+            transition  : 0.2s all;
+         }
+      }
+   }
+}

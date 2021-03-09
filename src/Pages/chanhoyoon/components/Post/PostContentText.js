@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './PostContentText.scss';
 
 class PostContentText extends Component {
 

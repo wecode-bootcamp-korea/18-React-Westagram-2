@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './PostComment.scss';
+
 class PostComment extends React.Component {
 
   state = {

@@ -11,7 +11,7 @@ class Main extends React.Component {
   };
 
   componentDidMount() {
-    fetch('http://localhost:3001/data/contentHeaderObj.json', {
+    fetch('http://localhost:3000/data/contentHeaderObj.json', {
       method: 'GET'
     })
     .then(res => res.json())
@@ -21,7 +21,7 @@ class Main extends React.Component {
       });
     });
 
-    fetch('http://localhost:3001/data/mainContentObj.json', {
+    fetch('http://localhost:3000/data/mainContentObj.json', {
       method: 'GET'
     })
     .then(res => res.json())

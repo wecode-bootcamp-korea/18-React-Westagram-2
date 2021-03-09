@@ -11,14 +11,21 @@ import appLinkImg2 from '../../../images/chanhoyoon/appAnd.png';
 import './login.scss';
 
 class Login extends React.Component {
+  constructor( props ) {
+    super(props);
+
+    this.inputIdRef = React.createRef();
+    this.inputPwRef = React.createRef();
+  }
+
   state = {
-    imgNameList  : [loginImg1, loginImg2, loginImg3, loginImg4],
-    loginId      : '',
-    loginPw      : '',
+    imgNameList        : [loginImg1, loginImg2, loginImg3, loginImg4],
+    loginId            : '',
+    loginPw            : '',
     toggleLoginIdInput : false,
     toggleLoginPwInput : false,
     toggleLoginBtnCheck: false,
-    imgSlideIndex: 4,
+    imgSlideIndex      : 4,
   };
 
   componentDidMount() {
@@ -34,7 +41,6 @@ class Login extends React.Component {
 
     this.setState({
       [e.target.name]: e.target.value,
-      loginPw : e.target.value
     });
     setTimeout(this.toggleLoginBtn, 100);
     setTimeout(this.toggleActionInput, 100);
@@ -52,24 +58,41 @@ class Login extends React.Component {
   };
   loginIdPwCheck = () => {
     console.log(this.state.loginId, this.state.loginPw);
-    const idRegExp = /^(?=.*?[0-9])$/;
+    const idRegExp = /^[A-Za-z0-9_][A-Za-z0-9._]*[@]{1}[a-z]*[.]+[a-z]{1,3}$/;
     const pwRegExp = /^[A-Za-z0-9!@#$%^&*()-_=+?/,.<>][A-Za-z0-9!@#$%^&*()-_=+?/,.<>]{4,}$/;
     const dbTestId = 'ych2174@gmail.com';
     const dbTestPw = '123123';
     if (!idRegExp.test(this.state.loginId)) {
+      this.inputFocus(false);
       alert('이메일을 정확히 입력해주세요!');
       return;
     }
     if (!pwRegExp.test(this.state.loginPw)) {
+      this.inputFocus(false);
       alert('비밀번호는 5글자 이상 입니다.!');
       return;
     }
     if (( this.state.loginId === dbTestId ) && ( this.state.loginPw === dbTestPw )) {
       alert('로그인 성공!');
+      this.inputFocus(true);
+      this.props.history.push('/main-chanho');
     } else {
       alert('로그인 실패!');
+      this.inputFocus(false);
     }
   };
+  inputFocus = ( bool ) => {
+    if (bool === false) {
+      this.inputIdRef.current.focus();
+      this.inputIdRef.current.value = '';
+      this.inputPwRef.current.value = '';
+      this.setState({ loginId: '', loginPw: '' });
+      this.setState({ toggleLoginIdInput: false, toggleLoginPwInput: false });
+    } else if (bool === true) {
+      this.setState({ toggleLoginIdInput: true, toggleLoginPwInput: true });
+    }
+  };
+
   handleLoginSubmit = ( e ) => {
     e.preventDefault();
     this.loginIdPwCheck();
@@ -99,11 +122,11 @@ class Login extends React.Component {
                 <form className="login-input-form" action="#" onSubmit={this.handleLoginSubmit}>
                   <label htmlFor="login-id" className="input-action-box">
                     <span className={toggleLoginIdInput ? 'span-id input-span-transform' : 'span-id'}>이메일</span>
-                    <input type="text" className={toggleLoginIdInput ? 'login-id input-move-y' : 'login-id'} id="login-id" name="loginId" onChange={this.handleChange}/>
+                    <input type="text" className={toggleLoginIdInput ? 'login-id input-move-y' : 'login-id'} id="login-id" name="loginId" ref={this.inputIdRef} onChange={this.handleChange}/>
                   </label>
                   <label htmlFor="login-pw" className="input-action-box">
                     <span className={toggleLoginPwInput ? 'span-pw input-span-transform' : 'span-pw'}>비밀번호</span>
-                    <input type="password" className={toggleLoginPwInput ? 'login-pw input-move-y' : 'login-pw'} id="login-pw" name="loginPw" onChange={this.handleChange}/>
+                    <input type="password" className={toggleLoginPwInput ? 'login-pw input-move-y' : 'login-pw'} id="login-pw" name="loginPw" ref={this.inputPwRef} onChange={this.handleChange}/>
                   </label>
                   <button className={toggleLoginBtnCheck ? 'login-btn login-btn-enable' : 'login-btn login-btn-disable'} type="submit">
                     로그인

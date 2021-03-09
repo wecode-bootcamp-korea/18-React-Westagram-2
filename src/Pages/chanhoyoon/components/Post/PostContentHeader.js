@@ -1,4 +1,5 @@
 import React from 'react';
+import './PostContentHeader.scss';
 
 class PostContentHeader extends React.Component {
 
