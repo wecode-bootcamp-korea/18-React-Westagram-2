@@ -5,7 +5,7 @@ import './PostComment.scss';
 class PostComment extends React.Component {
 
   state = {
-    toggleLike: false
+    toggleLike: false,
   };
 
   toggleLike = () => {
