@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import "./Main.scss";
 
@@ -7,7 +7,7 @@ import Feeds from "./Components/Feeds/Feeds";
 
 import littleDog from "../../../images/jaewookjung/littleDog.jpg";
 
-class MainJaewook extends React.Component {
+class MainJaewook extends Component {
     render() {
         return (
             <div className="MainPage">

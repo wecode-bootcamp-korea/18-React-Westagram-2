@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import "./Login.scss";
 
-class LoginJaewook extends React.Component {
+class LoginJaewook extends Component {
     constructor() {
         super();
 
@@ -10,6 +10,8 @@ class LoginJaewook extends React.Component {
             idValue: "",
             pwValue: "",
             btnOpacity: 0.3,
+            display: "none",
+            pwInputType: "password",
         };
     }
     handleIdInput = async (e) => {
@@ -24,6 +26,7 @@ class LoginJaewook extends React.Component {
             pwValue: e.target.value,
         });
         await this.changeBtnColor();
+        await this.showCheckPwBtn();
     };
 
     changeBtnColor = () => {
@@ -32,6 +35,25 @@ class LoginJaewook extends React.Component {
             : this.setState({ btnOpacity: 0.3 });
     };
 
+    showCheckPwBtn = () => {
+        this.state.pwValue
+            ? this.setState({
+                  display: "flex",
+              })
+            : this.setState({
+                  display: "none",
+              });
+    };
+
+    clickShowPwBtn = () => {
+        this.state.pwInputType === "password"
+            ? this.setState({
+                  pwInputType: "text",
+              })
+            : this.setState({
+                  pwInputType: "password",
+              });
+    };
     render() {
         return (
             <div className="LoginPage">
@@ -50,17 +72,22 @@ class LoginJaewook extends React.Component {
                             <input
                                 onChange={this.handlePwInput}
                                 className="input_pw"
-                                type="password"
+                                type={this.state.pwInputType}
                                 placeholder="비밀번호"
                             />
-                            <button className="show_pw" type="button">
+                            <button
+                                onClick={this.clickShowPwBtn}
+                                style={{ display: this.state.display }}
+                                className="show_pw"
+                                type="button"
+                            >
                                 비밀번호 표시
                             </button>
                         </div>
                         <button
                             className="submit_btn"
-                            type="submit"
                             style={{ opacity: this.state.btnOpacity }}
+                            type="submit"
                         >
                             로그인
                         </button>

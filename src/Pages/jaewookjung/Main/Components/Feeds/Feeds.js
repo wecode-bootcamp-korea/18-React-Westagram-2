@@ -99,8 +99,8 @@ class Feeds extends Component {
                     <i className="far fa-smile"></i>
                     <input
                         onKeyPress={this.inputKeypress}
-                        value={this.state.commentInputValue}
                         onChange={this.commentInputOnchange}
+                        value={this.state.commentInputValue}
                         className="comments_text"
                         type="text"
                         placeholder="댓글 달기..."
