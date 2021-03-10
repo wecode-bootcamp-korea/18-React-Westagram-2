@@ -11,7 +11,7 @@ class Feeds extends Component {
         this.state = {
             commentInputValue: "",
             opacity: 0.3,
-            commentContentlist: ["one", "two", "three"],
+            commentContentList: [],
         };
     }
     commentInputOnchange = async (e) => {
@@ -33,17 +33,21 @@ class Feeds extends Component {
 
     paintComment = () => {
         if (this.state.opacity === 1 && this.state.commentInputValue) {
-            this.state.commentContentlist.push(this.state.commentInputValue);
+            this.state.commentContentList.push({
+                userName: "hahah",
+                commentContent: this.state.commentInputValue,
+            });
         }
         this.setState({
             commentInputValue: "",
         });
     };
 
-    inputKeypress = (e) => {
+    inputKeypress = async (e) => {
         if (e.key === "Enter") {
-            this.paintComment();
+            await this.paintComment();
         }
+        await this.changeBtnColor();
     };
 
     render() {
@@ -92,7 +96,9 @@ class Feeds extends Component {
                     </article>
                     <time className="img_dates">2일전</time>
                     <ul className="comment_box">
-                        <Comment contentList={this.state.commentContentlist} />
+                        {this.state.commentContentList.map((comment, idx) => {
+                            return <Comment key={idx} comment={comment} />;
+                        })}
                     </ul>
                 </div>
                 <div className="comments_column">

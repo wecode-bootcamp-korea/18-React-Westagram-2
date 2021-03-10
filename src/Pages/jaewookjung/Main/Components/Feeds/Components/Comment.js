@@ -1,10 +1,14 @@
 import React, { Component } from "react";
+import "./Comment.scss";
 
 class Comment extends Component {
     render() {
-        return this.props.contentList.map((comment, idx) => (
-            <li key={idx}>{comment}</li>
-        ));
+        return (
+            <li>
+                <span>{this.props.comment.userName}</span>
+                {this.props.comment.commentContent}
+            </li>
+        );
     }
 }
 

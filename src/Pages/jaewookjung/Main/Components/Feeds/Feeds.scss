@@ -75,44 +75,15 @@ section {
             }
         }
 
-        .comments_container {
-            list-style: none;
-            padding: 0px 8px;
-
-            li {
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 10px;
-
-                .comment_contents {
-                    font-size: 14px;
-
-                    .comment_user {
-                        margin-right: 5px;
-                        font-weight: 800;
-                    }
-                }
-
-                .comments_icons {
-                    i {
-                        margin-left: 10px;
-                    }
-
-                    .fas {
-                        color: red;
-                    }
-
-                    .far {
-                        color: black;
-                    }
-                }
-            }
-        }
-
         .img_dates {
             padding-left: 8px;
             font-size: 10px;
             color: $color-grey;
+        }
+
+        .comment_box {
+            padding: 0px;
+            margin-left: 8px;
         }
     }
     .comments_column {

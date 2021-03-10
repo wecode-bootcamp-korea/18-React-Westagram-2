@@ -14,19 +14,16 @@ class LoginJaewook extends Component {
             pwInputType: "password",
         };
     }
-    handleIdInput = async (e) => {
-        await this.setState({
-            idValue: e.target.value,
-        });
-        await this.changeBtnColor();
-    };
-
-    handlePwInput = async (e) => {
-        await this.setState({
-            pwValue: e.target.value,
-        });
-        await this.changeBtnColor();
-        await this.showCheckPwBtn();
+    handleInputValue = (e) => {
+        this.setState(
+            {
+                [e.target.name]: e.target.value,
+            },
+            () => {
+                this.changeBtnColor();
+                this.showCheckPwBtn();
+            }
+        );
     };
 
     changeBtnColor = () => {
@@ -54,6 +51,19 @@ class LoginJaewook extends Component {
                   pwInputType: "password",
               });
     };
+
+    clickLoginBtn = () => {
+        fetch("url", {
+            method: "POST",
+            body: JSON.stringify({
+                username: "jaewook",
+                email: this.state.idValue,
+                password: this.state.pwValue,
+            }),
+        })
+            .then((response) => response.json())
+            .then((result) => console.log(result));
+    };
     render() {
         return (
             <div className="LoginPage">
@@ -62,16 +72,18 @@ class LoginJaewook extends Component {
                     <form className="contents">
                         <div className="id_box input_box">
                             <input
-                                onChange={this.handleIdInput}
+                                onChange={this.handleInputValue}
                                 className="input_id"
+                                name="idValue"
                                 type="email"
                                 placeholder="전화번호, 사용자 이름 또는 이메일"
                             />
                         </div>
                         <div className="pw_box input_box">
                             <input
-                                onChange={this.handlePwInput}
+                                onChange={this.handleInputValue}
                                 className="input_pw"
+                                name="pwValue"
                                 type={this.state.pwInputType}
                                 placeholder="비밀번호"
                             />
@@ -85,9 +97,10 @@ class LoginJaewook extends Component {
                             </button>
                         </div>
                         <button
+                            onClick={this.clickLoginBtn}
                             className="submit_btn"
                             style={{ opacity: this.state.btnOpacity }}
-                            type="submit"
+                            type="button"
                         >
                             로그인
                         </button>
