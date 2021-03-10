@@ -1,12 +1,4 @@
-.MainYoojin{
-
-    body{
-        width: 100vw;
-        height: 100vh;
-        margin: 0;
-        background-color: #fafafa;
-    }
-        
+.MainYoojin{ 
     /* header */
     #headerLine{
         width: 100%;
@@ -41,7 +33,7 @@
         border-radius: 70%;
     }
 
-    div.headerElements{
+    .headerElements{
         display: flex;
         justify-content: space-around;
         position: relative;
@@ -57,7 +49,7 @@
     }
 
     /* story */
-    div.storyBox{
+    .storyBox{
         width: 615px;
         height: 120px;
         margin-bottom: 20px;
@@ -67,19 +59,19 @@
 
     }
 
-    div.firststory{
+    .firststory{
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 20px 520px 0 0;
     }
 
-    img.storyProfileImg{
+    .storyProfileImg{
         width: 60px;
         border-radius: 70%;
     }
 
-    span.storyUsername{
+    .storyUsername{
         margin-top: 5px;
         color: rgb(75, 75, 75);
         font-size: 12px;
@@ -87,7 +79,7 @@
     }
 
     /* article */
-    article.firstArticle{
+    .firstArticle{
         position: relative;
         box-sizing: content-box;
         width: 615px;
@@ -98,7 +90,7 @@
         background-color: #ffffff;
     }
 
-    div.articleHeader{
+    .articleHeader{
         position: absolute;
         display: flex;
         justify-content: space-between;
@@ -109,37 +101,33 @@
         padding: 10px;
     }
 
-    img.feedProfileImg{
+    .feedProfileImg{
         width: 40px;
         height: 40px;
         border: 0.3px solid lightgrey;
         border-radius: 70%;
     }
 
-    a.feedUsername{
-        margin-right: 390px;
+    .feedUsername{
+        margin-right: 370px;
         color: black;
         text-decoration: none;
         font-size: 17px;
         font-weight: 700;
     }
 
-    svg._8-yf5 {
-        cursor: pointer;
-    }
-
-    a.feedUsername:hover{
+    .feedUsername:hover{
         text-decoration: underline;
     }
 
-    img.articleMainImg{
+    .articleMainImg{
         position: absolute;
         top: 60px;
         box-sizing: border-box;
         width: 615px;
     }
 
-    section.mainFeed{
+    .mainFeed{
         position: absolute;
         top: 833.04px;
         box-sizing: border-box;
@@ -147,14 +135,10 @@
         height: 350px;
     }
 
-    div.articleIcon{
+    .articleIcon{
         display: flex;
         justify-content: space-between;
         margin: 10px 10px;
-    }
-
-    svg.heartChangeColor:hover {
-        fill: rgb(199, 60, 88);
     }
 
     #likeUsername{
@@ -175,7 +159,7 @@
         cursor: pointer;
     }
 
-    span.mention{
+    .mention{
         display: inline;
         vertical-align: 7%;
         margin-left: 20px;
@@ -184,7 +168,7 @@
         font-weight: 400;
     }
 
-    a.hashtag{
+    .hashtag{
         color: rgb(6, 39, 100);
         text-decoration: none;
         cursor: pointer;
@@ -197,7 +181,7 @@
     }
 
     /*comment*/
-    section.commentBox{
+    .commentBox{
         position: absolute;
         top: 1183.04px;
         box-sizing: border-box;
@@ -211,13 +195,13 @@
         background-color: #ffffff;
     }
 
-    input.commentInput{
+    .commentInput{
         margin: 0 290px 0 0;
         border-style: none;
         background-color: transparent;
     }
 
-    button.commentButton{
+    .commentButton{
         border-style: none;
         background-color: transparent;
         font-size: 15px;
@@ -226,17 +210,10 @@
     }
 
     /* sidebar */
-    article.sidebar{
+    .sidebar{
         width: 293px;
         height: 500px;
         background-color: aqua;
     }
 
-}
-
-.commentul{
-    list-style-type: none;
-    padding-left: 20px;
-    font-size: 15px;
-    font-weight: 400;
 }
