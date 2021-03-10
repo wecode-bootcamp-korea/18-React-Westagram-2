@@ -8,7 +8,23 @@ import Feeds from "./Components/Feeds/Feeds";
 import littleDog from "../../../images/jaewookjung/littleDog.jpg";
 
 class MainJaewook extends Component {
+    constructor(){
+        super();
+        this.state = {
+            feedData : []
+        }
+    }
+    componentDidMount = () => {
+        fetch("http://localhost:3000/data/feedsData.json", {
+            method: "GET"
+        })
+        .then(res => res.json())
+        .then(result => this.setState({
+            feedData : result
+        }))
+    }
     render() {
+        const {feedData} = this.state;
         return (
             <div className="MainPage">
                 <Nav />
@@ -25,7 +41,9 @@ class MainJaewook extends Component {
                                     <div className="followers_name">doggy</div>
                                 </div>
                             </div>
-                            <Feeds />
+                            {feedData.map(data => {
+                               return <Feeds key={data.id} feedContentData={data}/>
+                            })}
                         </div>
                         <aside>
                             <div className="aside_container">
@@ -52,7 +70,7 @@ class MainJaewook extends Component {
                                 </div>
                                 <div className="recommend_notice general_column">
                                     <span className="column_left">
-                                        회원님을 위한 추천
+                                        회원님을 위한 추천
                                     </span>
                                     <button
                                         className="column_right"

@@ -6,7 +6,7 @@ class Comment extends Component {
         return (
             <li>
                 <span>{this.props.comment.userName}</span>
-                {this.props.comment.commentContent}
+                {this.props.comment.content}
             </li>
         );
     }

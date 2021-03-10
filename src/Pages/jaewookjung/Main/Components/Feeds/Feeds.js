@@ -14,6 +14,17 @@ class Feeds extends Component {
             commentContentList: [],
         };
     }
+
+    componentDidMount = () => {
+        fetch("http://localhost:3000/data/commentData.json", {
+            method:"GET",
+        })
+        .then(res => res.json())
+        .then(result => this.setState({
+            commentContentList : result,
+        }))
+    }
+
     commentInputOnchange = async (e) => {
         await this.setState({
             commentInputValue: e.target.value,
@@ -34,8 +45,10 @@ class Feeds extends Component {
     paintComment = () => {
         if (this.state.opacity === 1 && this.state.commentInputValue) {
             this.state.commentContentList.push({
+                id : this.state.commentContentList.length + 1,
                 userName: "hahah",
-                commentContent: this.state.commentInputValue,
+                content: this.state.commentInputValue,
+                isLiked : false
             });
         }
         this.setState({
@@ -51,6 +64,8 @@ class Feeds extends Component {
     };
 
     render() {
+        const {commentContentList} = this.state
+        console.log(commentContentList)
         return (
             <section>
                 <div className="section_header general_column">
@@ -61,8 +76,8 @@ class Feeds extends Component {
                             alt="smallImage"
                         />
                         <div className="left_text">
-                            <div className="text_name">Doggy</div>
-                            <div className="text_des">dog</div>
+                            <div className="text_name">{this.props.feedContentData.userName}</div>
+                            <div className="text_des">{this.props.feedContentData.userDesc}</div>
                         </div>
                     </div>
                     <div className="column_right">
@@ -82,7 +97,7 @@ class Feeds extends Component {
                         </div>
                     </div>
                     <div className="img_likes">
-                        좋아요 <span className="likes_num">0</span>개
+                        좋아요 <span className="likes_num">{this.props.feedContentData.likedNum}</span>개
                     </div>
                     <article>
                         <p className="img_articles">
@@ -96,8 +111,8 @@ class Feeds extends Component {
                     </article>
                     <time className="img_dates">2일전</time>
                     <ul className="comment_box">
-                        {this.state.commentContentList.map((comment, idx) => {
-                            return <Comment key={idx} comment={comment} />;
+                        {commentContentList.map((comment) => {
+                            return <Comment key={comment.id} comment={comment} />;
                         })}
                     </ul>
                 </div>

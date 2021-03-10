@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "userName": "wecode",
+      "userImgSrc": "../src/images/jaewookjung/littleDog.jpg",
+      "userDesc": "wecode",
+      "mainImgSrc" : "./images/jaewookjung/mainDog.jpg",
+      "mainIgDesc": "Welcome to world best coding bootcamp!",
+      "likedNum": 3
+    },
+    {
+      "id": 2,
+      "userName": "joonsikyang",
+      "userImgSrc": "../src/images/jaewookjung/littleDog.jpg",
+      "userDesc": "mentor",
+      "mainImgSrc" : "../src/images/jaewookjung/mainDog.jpg",
+      "likedNum": 2040
+    },
+    {
+      "id": 3,
+      "userName": "jayPark",
+      "userImgSrc": "require('../src/images/jaewookjung/littleDog.jpg')",
+      "userDesc": "star",
+      "mainImgSrc" : "../src/images/jaewookjung/mainDog.jpg",
+      "likedNum": 200
+    }
+  ]
