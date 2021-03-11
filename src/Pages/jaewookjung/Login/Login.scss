@@ -53,7 +53,6 @@
 
                 /* 비밀번호 표시 유무에 대한 버튼 */
                 .show_pw {
-                    display: none;
                     justify-content: center;
                     align-items: center;
                     border: none;
@@ -61,6 +60,12 @@
                     white-space: nowrap;
                     font-size: 10px;
                     font-weight: 600;
+                }
+                .show_pw_disable {
+                    display: none;
+                }
+                .show_pw_able {
+                    display: flex;
                 }
             }
 
@@ -73,8 +78,13 @@
                 border-radius: 4px;
                 background-color: #0095f6;
                 color: white;
-                opacity: 0.3;
                 font-weight: 600;
+            }
+            .submit_btn_disable {
+                opacity: 0.3;
+            }
+            .submit_btn_able {
+                opacity: 1;
             }
             a {
                 margin-top: 80px;

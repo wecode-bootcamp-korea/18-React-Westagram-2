@@ -9,37 +9,13 @@ class LoginJaewook extends Component {
         this.state = {
             idValue: "",
             pwValue: "",
-            btnOpacity: 0.3,
-            display: "none",
             pwInputType: "password",
         };
     }
     handleInputValue = (e) => {
-        this.setState(
-            {
-                [e.target.name]: e.target.value,
-            },
-            () => {
-                this.changeBtnColor();
-                this.showCheckPwBtn();
-            }
-        );
-    };
-
-    changeBtnColor = () => {
-        this.state.idValue.includes("@") && this.state.pwValue.length >= 5
-            ? this.setState({ btnOpacity: 1 })
-            : this.setState({ btnOpacity: 0.3 });
-    };
-
-    showCheckPwBtn = () => {
-        this.state.pwValue
-            ? this.setState({
-                  display: "flex",
-              })
-            : this.setState({
-                  display: "none",
-              });
+        this.setState({
+            [e.target.name]: e.target.value,
+        });
     };
 
     clickShowPwBtn = () => {
@@ -89,17 +65,26 @@ class LoginJaewook extends Component {
                             />
                             <button
                                 onClick={this.clickShowPwBtn}
-                                style={{ display: this.state.display }}
-                                className="show_pw"
+                                className={
+                                    this.state.pwValue
+                                        ? "show_pw show_pw_able"
+                                        : "show_pw show_pw_disable"
+                                }
                                 type="button"
                             >
-                                비밀번호 표시
+                                {this.state.pwInputType === "password"
+                                    ? "비밀번호 표시"
+                                    : "비밀번호 숨김"}
                             </button>
                         </div>
                         <button
                             onClick={this.clickLoginBtn}
-                            className="submit_btn"
-                            style={{ opacity: this.state.btnOpacity }}
+                            className={
+                                this.state.idValue.includes("@") &&
+                                this.state.pwValue.length >= 5
+                                    ? "submit_btn submit_btn_able"
+                                    : "submit_btn submit_btn_disable"
+                            }
                             type="button"
                         >
                             로그인

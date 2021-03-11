@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-@import "../../../Styles/common.scss";
 @import "./Components/Nav/Nav.scss";
 @import "./Components/Feeds/Feeds.scss";
 
@@ -91,94 +90,10 @@
                     &::-webkit-scrollbar {
                         display: none; /* Chrome, Safari and Opera */
                     }
-
-                    /* elements in main feed header */
-                    .followers {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        margin-right: 20px;
-
-                        &_name {
-                            text-align: center;
-                        }
-
-                        &_img {
-                            margin-bottom: 4px;
-                        }
-                    }
                 }
             }
 
             /* aside */
-            aside {
-                width: 293px;
-
-                .aside_container {
-                    position: fixed;
-                    width: 293px;
-                    margin-top: 20px;
-
-                    .user_info {
-                        margin-bottom: 22px;
-
-                        .column_left {
-                            display: flex;
-
-                            .user_img {
-                                margin-right: 12px;
-                            }
-
-                            .user_id {
-                                font-size: 15px;
-                                font-weight: 600;
-                            }
-
-                            .user_name {
-                                font-size: 15px;
-                                font-weight: 400;
-                                color: $color-grey;
-                            }
-                        }
-                    }
-
-                    .recommend_notice {
-                        .column_left {
-                            font-size: 14px;
-                            font-weight: 600;
-                            color: $color-grey;
-                        }
-
-                        .column_right {
-                            font-size: 12px;
-                            font-weight: 600;
-                        }
-                    }
-
-                    .recommend_info {
-                        margin: 16px 0px;
-
-                        .recommend_img {
-                            margin-right: 12px;
-                        }
-
-                        .recommend_id {
-                            font-size: 14px;
-                            font-weight: 600;
-                        }
-
-                        .recommend_name {
-                            font-size: 12px;
-                            color: $color-grey;
-                        }
-                    }
-                }
-
-                .blue_text {
-                    font-size: 12px;
-                    font-weight: 600;
-                }
-            }
         }
     }
 }
