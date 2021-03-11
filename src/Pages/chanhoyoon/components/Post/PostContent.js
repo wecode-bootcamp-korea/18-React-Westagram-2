@@ -11,13 +11,11 @@ class PostContent extends React.Component {
     const { mainContentObj: mainObj, index, handleLikeUpdate } = this.props;
 
     return (
-      <>
-        <section className="main-content-list">
-          <PostContentHeader contentHeader={mainObj}/>
-          <PostContentMain contentMainImgList={mainObj.channelContentImgList} contentMainName={mainObj.channelName}/>
-          <PostContentDescription mainContentObj={mainObj} handleLikeUpdate={handleLikeUpdate} index={index}/>
-        </section>
-      </>
+      <section className="main-content-list">
+        <PostContentHeader contentHeader={mainObj}/>
+        <PostContentMain contentMainImgList={mainObj.channelContentImgList} contentMainName={mainObj.channelName}/>
+        <PostContentDescription mainContentObj={mainObj} handleLikeUpdate={handleLikeUpdate} index={index}/>
+      </section>
     );
   }
 }

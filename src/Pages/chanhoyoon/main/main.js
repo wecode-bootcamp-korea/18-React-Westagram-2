@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './main.scss';
 
 import PostContent from '../components/Post/PostContent.js';
@@ -12,7 +13,6 @@ class Main extends React.Component {
 
   componentDidMount() {
     fetch('http://localhost:3000/data/contentHeaderObj.json', {
-      method: 'GET'
     })
     .then(res => res.json())
     .then(data => {
@@ -20,9 +20,7 @@ class Main extends React.Component {
         contentHeaderObj: data,
       });
     });
-
     fetch('http://localhost:3000/data/mainContentObj.json', {
-      method: 'GET'
     })
     .then(res => res.json())
     .then(data => {
@@ -32,12 +30,11 @@ class Main extends React.Component {
     });
   }
 
-  handleLikeUpdate = ( id, data ) => {
-    console.log(id, data);
+  handleLikeUpdate = ( id, comment ) => {
     const { mainContentObj } = this.state;
     this.setState({
       information: mainContentObj.map(( list ) => (
-        id === list.id ? { ...list, ...data } : { list } )
+        id === list.id ? { ...list, ...comment } : { list } )
       )
     });
   };

@@ -31,8 +31,6 @@ class Aside extends React.Component {
 
   render() {
     const { accountObj, asideRecommendObj } = this.state;
-    console.log(accountObj);
-    console.log(asideRecommendObj);
     return (
       <aside className="aside-section">
         <div className="aside-section-fixed">

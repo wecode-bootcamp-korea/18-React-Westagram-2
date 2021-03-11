@@ -23,6 +23,12 @@
          color      : #9f989e;
          transition : 0.6s all;
       }
+      .like-btn-red {
+         color : red;
+      }
+      .like-btn-black {
+         color : #9f989e;
+      }
       button {
          &:last-child {
             margin-left : 4px;

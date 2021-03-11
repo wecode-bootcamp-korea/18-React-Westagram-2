@@ -15,8 +15,15 @@
       }
       .header-icon button {
          margin-right : 15px;
+
          i {
             transition : 0.6s all;
+         }
+         .like-color-red {
+            color: red;
+         }
+         .like-color-black {
+            color: black;
          }
       }
       .header-img-length-icon {
@@ -80,6 +87,12 @@
             font-weight : bold;
             color       : #d3e5f6;
             transition  : 0.2s all;
+         }
+         .submit-btn-enable {
+            color: rgb(38, 126, 184);
+         }
+         .submit-btn-disable {
+            color: rgb(211, 229, 246);
          }
       }
    }
