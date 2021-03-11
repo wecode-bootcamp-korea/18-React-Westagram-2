@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Westagram!! 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> 순수 바닐라 자바스크립트, HTML, CSS로 구현한 인스타그램 클론 프로젝트를 React로 옮겨서 만든 인스타그램 클론 코딩 프로젝트
 
-## Available Scripts
+## 프로젝트
 
-In the project directory, you can run:
+![login](https://user-images.githubusercontent.com/54402926/110774427-23637c00-82a1-11eb-9a8e-613828f1b211.gif)
 
-### `npm start`
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/54402926/110775482-4e020480-82a2-11eb-94b4-b80023f0b891.gif)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**주제: React를 사용한 Instagram clone 코딩**
+- CRA(Create React App) 세팅
+- 4명의 팀원들이 공동 `Routes`,`scss` 사용 및 관리
+- 한 컴퓨터에서 초기세팅을 완료하고 나머지 팀원들이 `마스터`브랜치에서 clone 받아 같은 환경 및 각자 폴더에서 작업 및 푸시
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**📆 프로젝트 기간**
+2021.02.23 ~ 2021.03.11
 
-### `npm test`
+## 팀 원 별 작업현황 
+- 공통
+  - 로그인, 메인 페이지 레이아웃
+  - 아이디와 비밀번호 입력시 로그인 버튼 활성화
+  - 버튼은 'Enter' 값과 'click' 했을 때 반응하도록 구현
+  - 댓글 input창 입력 시 게시 버튼 활성화 기능
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 권유진
+  - mock 데이터 사용해서 feed 출력!
+- 윤찬호
+  - 댓글, 게시글 좋아요 버튼 기능
+  - 댓글 작성 몇 개 출력
+  - 로그인 이미지 슬라이드 효과, 메인 피드 슬라이드 효과!
+- 권영균
+  - 댓글, 좋아요 버튼 기능!
+- 정재욱
+  - mock 데이터 사용해서 feed 출력!
 
-### `npm run build`
+## 기술 스택
+- HTML,CSS
+- ES6 JavaScript
+- React
+- SCSS
+- UUID 라이브러리
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 팀원별 프로젝트 블로그
+[윤찬호 블로그](https://velog.io/@chyoon0512/westargram-react-%EB%A9%94%EC%9D%B8%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-%EA%B8%B0%EB%8A%A5)
+<br/>
+[권유진 블로그](https://velog.io/@yoojin-kwon)
+<br/>
+[권영균 블로그](https://velog.io/@dudrbs1040)
+<br/>
+[정재욱 블로그](https://jwookj.tistory.com/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
