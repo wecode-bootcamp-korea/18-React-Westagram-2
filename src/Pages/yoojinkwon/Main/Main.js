@@ -47,6 +47,18 @@ class MainYoojin extends Component {
             comment : ""
         }))
     }
+    
+    componentDidMount() {
+        fetch('http://localhost:3001/data/commentMockdata.json', {
+        method: 'GET'
+        })
+        .then(res => res.json())
+        .then(data => {
+            this.setState({
+            commentList: data,     
+            });
+        });
+    }
 
     render() {
         const {handleComment, handleList} = this;
