@@ -1,0 +1,38 @@
+.content-list-main {
+   width  : 100%;
+   height : 100%;
+   .list-main-img-ul {
+      position : relative;
+      display  : flex;
+      width    : 100%;
+      height   : 100%;
+      overflow : hidden;
+      .list-main-img-arrow {
+         display : none;
+      }
+      .img-list {
+         transition : .7s all;
+         &:hover {
+            .list-main-img-arrow {
+               width           : 100%;
+               height          : 100%;
+               position        : absolute;
+               display         : flex;
+               justify-content : space-between;
+               align-items     : center;
+               padding         : 12px;
+               i {
+                  font-size : 25px;
+                  color     : white;
+                  cursor    : pointer;
+               }
+            }
+         }
+         img {
+            width      : 643px;
+            height     : 500px;
+            object-fit : cover;
+         }
+      }
+   }
+}

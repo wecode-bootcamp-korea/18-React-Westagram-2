@@ -7,8 +7,11 @@ import {
 
 import LoginYoojin from './Pages/yoojinkwon/Login/Login.js';
 import MainYoojin from './Pages/yoojinkwon/Main/Main.js';
-import LoginChanho from './Pages/chanhoyoon/Login/Login.js';
-import MainChanho from './Pages/chanhoyoon/Main/Main.js';
+
+import LoginChanho from './Pages/chanhoyoon/login/login.js';
+import MainChanho from './Pages/chanhoyoon/layout/AppLayout.js';
+import Join from './Pages/chanhoyoon/join/Join.js'
+
 import LoginJaewook from './Pages/jaewookjung/Login/Login.js';
 import MainJaewook from './Pages/jaewookjung/Main/Main.js';
 import LoginYoungkyun from './Pages/youngkyunkwon/Login/Login.js';
@@ -23,6 +26,7 @@ class Routes extends React.Component {
           <Route exact path="/main-yoojin" component={MainYoojin} />
           <Route exact path="/login-chanho" component={LoginChanho} />
           <Route exact path="/main-chanho" component={MainChanho} />
+          <Route exact path="/join-chanho" component={Join} />
           <Route exact path="/login-jaewook" component={LoginJaewook} />
           <Route exact path="/main-jaewook" component={MainJaewook} />
           <Route exact path="/login-youngkyun" component={LoginYoungkyun} />

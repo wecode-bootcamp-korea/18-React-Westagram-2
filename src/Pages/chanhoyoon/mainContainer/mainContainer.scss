@@ -1,0 +1,18 @@
+.main {
+   position         : relative;
+   display          : flex;
+   justify-content  : center;
+   width            : 100%;
+   max-width        : 950px;
+   margin-top       : 55px;
+   background-color : #f4f5f6;
+}
+
+@media (max-width : 1000px) {
+   .aside-section {
+      display : none;
+   }
+   .container .main .main-section {
+      margin : 0;
+   }
+}
