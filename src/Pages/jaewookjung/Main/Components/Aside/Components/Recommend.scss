@@ -1,0 +1,19 @@
+@import "../../../../../../Styles/common.scss";
+
+.recommend_info {
+    margin: 16px 0px;
+
+    .recommend_img {
+        margin-right: 12px;
+    }
+
+    .recommend_id {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .recommend_name {
+        font-size: 12px;
+        color: $color-grey;
+    }
+}

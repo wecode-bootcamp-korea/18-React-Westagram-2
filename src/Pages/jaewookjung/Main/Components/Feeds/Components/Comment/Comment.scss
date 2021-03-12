@@ -1,0 +1,10 @@
+@import "../../../../../../../Styles/common.scss";
+
+li {
+    margin-bottom: 8px;
+    list-style: none;
+    span {
+        margin-right: 10px;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,17 @@
+@import "../../../../../Styles/common.scss";
+
+/* elements in main feed header */
+.followers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+
+    &_name {
+        text-align: center;
+    }
+
+    &_img {
+        margin-bottom: 4px;
+    }
+}

@@ -1,0 +1,53 @@
+@import "../../../../../Styles/common.scss";
+
+/* aside */
+aside {
+    width: 293px;
+
+    .aside_container {
+        position: fixed;
+        width: 293px;
+        margin-top: 20px;
+
+        .user_info {
+            margin-bottom: 22px;
+
+            .column_left {
+                display: flex;
+
+                .user_img {
+                    margin-right: 12px;
+                }
+
+                .user_id {
+                    font-size: 15px;
+                    font-weight: 600;
+                }
+
+                .user_name {
+                    font-size: 15px;
+                    font-weight: 400;
+                    color: $color-grey;
+                }
+            }
+        }
+
+        .recommend_notice {
+            .column_left {
+                font-size: 14px;
+                font-weight: 600;
+                color: $color-grey;
+            }
+
+            .column_right {
+                font-size: 12px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .blue_text {
+        font-size: 12px;
+        font-weight: 600;
+    }
+}
