@@ -1,7 +1,8 @@
 import React from 'react';
 import './Login.scss';
-import '../../../Styles/common.scss';
-import '../../../Styles/reset.scss';
+//import '../../../Styles/common.scss';
+//import '../../../Styles/reset.scss';
+// eslint-disable-next-line
 import { Link } from 'react-router-dom';
 
 class LoginYoungkyun extends React.Component {
@@ -9,17 +10,17 @@ class LoginYoungkyun extends React.Component {
         super();
         this.state= {
             id: "",
-            pw: ""
+            pw: "",
         };
     }
 
-    goToMain = () => { 
+    goToMain = () => {
         const {id, pw} = this.state;
-        if(id.length > 0 && pw.length > 0) {
-            this.props.history.push("/main");
+        if(id.includes("@") && pw.length > 4) {
+            this.props.history.push("/main-youngkyun");
         }
     }
-
+    
     handleIdValue = (e) => {
         //console.log("바뀌고 있음", e.target.value);
         this.setState({id: e.target.value});
@@ -36,57 +37,42 @@ class LoginYoungkyun extends React.Component {
     }*/
     
     checkInput = () => {
-        if(this.state.id.includes("@") && this.state.pw.lengh > 4) {
-            this.setState({color: "blue"});
-        }
-        if(this.state.id || this.state.pw) {
-            this.setState({color: "orange"});
-        }
-    };
-
-    checkValidData = () => {
-        return this.state.id.includes("@") && this.state.pw.length > 4
+        this.state.id.includes("@") && this.state.pw.length > 4?
+        this.setState({button: "active"}) :
+        this.setState({button: ""})
     };
 
     render() {
-        console.log(this.state);
         return (
-            <section className= "LoginYoungkyun">
-                <div className= "layout">
-                    <header>
-                        <div className= "instagram">
-                            <Link to ='/main-youngkyun'>
-                            <h1>westagram</h1>
-                            </Link>
-                        </div>
-                    </header>
+            <section className= "loginYoungkyun">
+                <div className= "loginPage">
+                    <div className= "loginSubPage">
+                        <h1 class= "loginLogo">westagram</h1>
                     <main>
-                        <div className= "input">
-                            <div className= "name">
+                        <div className= "loginAll">
+                            <div className= "loginForm">
                                 <input type= "email" 
-                                    className= "id" 
+                                    className= "loginId" 
                                     name= "user_name" 
                                     placeholder= "전화번호, 사용자 이름 또는 이메일"  
                                     onChange={this.handleIdValue}
                                     onKeyUp= {this.checkInput}
                                 />
-                            <br/>
                                 <input type= "password" 
-                                    className= "pw" 
+                                    className= "loginPw" 
                                     name= "user_password" 
                                     placeholder= "비밀번호" 
                                     onChange={this.handlePwValue}
                                     onKeyUp= {this.checkInput}
                                 />
                             </div>
-                            <div>
-                                <button type="summit" onClick={this.goToMain}>로그인</button>
-                            </div>
+                            <button type="submit" className= {this.state.button} onClick={this.goToMain}>로그인</button>
                         </div>
                     </main>
                     <footer>
-                        <div className= "forget">비밀번호를 잊으셨나요?</div>
+                        <div className= "pwHelp">비밀번호를 잊으셨나요?</div>
                     </footer>
+                    </div>
                 </div>
             </section>
         );
